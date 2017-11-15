@@ -30,7 +30,7 @@ enum Species {
 class ViewController: UIViewController, FrameExtractorDelegate {
     
     var frameExtractor: FrameExtractor!
-    var testImages: [String] = ["cat", "dog", "hot-cat", "hot-dog", "hotdog"]
+    var testImages: [String] = ["cat1", "cat2", "cat3", "dog1", "dog2", "dog3"]
     var randomPic: Int = 0
     var useTestCaptured: Bool = false
     var lag = 1
