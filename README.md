@@ -72,3 +72,14 @@ TODO: git clone <github link>
    * TODO: Change the current model to `coreml().model`
    * Clean and build project
    * Test your iOS app
+
+____
+
+### IMAGE ATTRIBUTION
+The following works of great photography were used in the iOS app:
+* https://pixabay.com/en/puppy-dog-pet-animal-cute-white-1903313/
+* https://pixabay.com/en/puppy-spaniel-dog-animal-young-2940583/
+* https://pixabay.com/en/dog-forest-lake-view-dog-human-2939126/
+* https://pixabay.com/en/cat-feline-animal-domestic-pet-2938019/
+* https://pixabay.com/en/cat-young-animal-curious-wildcat-2083492/
+* https://pixabay.com/en/cat-s-eyes-animal-shelter-mieze-2671903/
