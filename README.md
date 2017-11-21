@@ -3,7 +3,7 @@
 ## Introduction
 
 With the release of [Core
-ML](https://developer.apple.com/machine-learning/) by Apple at [WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/703/), iOS,macOS, watchOS and tvOS developers can now easily integrate a machine learning model into their app. This enables developers to bring intelligent new features to users with just a few lines of code. Core ML makes machine learning more accessible to mobile developers. It also enables rapid prototyping and the use of different sensors (like the camera, GPS, etc.) to create more powerful apps than ever.
+ML](https://developer.apple.com/machine-learning/) by Apple at [WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/703/), iOS,m acOS, watchOS and tvOS developers can now easily integrate a machine learning model into their app. This enables developers to bring intelligent new features to users with just a few lines of code. Core ML makes machine learning more accessible to mobile developers. It also enables rapid prototyping and the use of different sensors (like the camera, GPS, etc.) to create more powerful apps than ever.
 
 Members of the MXNet community, including contributors from Apple and Amazon Web Services (AWS), have collaborated to produce a tool that converts machine learning models built using MXNet to Core ML format. This tool makes it easy for developers to build apps powered by machine learning for Apple devices. With this conversion tool, you now have a fast pipeline for your deep-learning-enabled applications. You can move from scalable and efficient distributed model training in the AWS Cloud using MXNet to fast run time inference on Apple devices.
 
@@ -11,20 +11,25 @@ To support the release of the converter tool we will use models trained on milli
 
 ## Instructions
 
-#### 1. Create A Training Compute Instance:
+#### 1. Download instructions and artifacts:
+* Download the git project by:
+```
+git clone https://github.com/aws-samples/reinvent-fine-tune-mxnet-model-for-ios-coreml.git
+```
+
+#### 2. Create A Training Compute Instance:
 In the Amazon EC2 console, launch an instance. For step-by-step instructions, see Launching an AWS Marketplace Instance in the [Amazon EC2 User Guide for Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launch-marketplace-console.html). As you follow the steps, use the following values:
 
-   * Navigate to the EC2 Console in TODO:us-west-2: https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2
+   * Navigate to the EC2 Console in eu-west-1: https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-1
 
-   * On the Choose an Amazon Machine Image (AMI) page, choose the `Community AMIs` tab, and search for `ami-eeae6696`. [Typically, you can launch the AWS Deep Learning AMI from the Marketplace tab. The AMI with ID `ami-eeae6696` is actually the Deep Learning AMI with the data already downloaded in the interest of time.]
+   * On the Choose an Amazon Machine Image (AMI) page, choose the `Community AMIs` tab, and search for `Deep Learning AMI Ubuntu Linux - 2.4_Oct2017`.
 
    * On the Choose an Instance Type page, choose the `p2.xlarge` instance type.
 
    * On the Configure Instance Details page, do the following:
     * From the Network drop-down, choose your VPC.
     * From the Auto-assign Public IP list, choose Enable
-
-   * On the Add Storage page, choose the default storage size. The AMI uses about 38 GB of disk space.
+   * On the Add Storage page, use the default 50GB for storage size.
    * On the Add Tags page, add one tag with the key Name and any value (e.g. `mcl311`).
    * On the Configure Security Group page, leave the default settings which should be:
     * Protocol (TCP) rule.
@@ -32,44 +37,37 @@ In the Amazon EC2 console, launch an instance. For step-by-step instructions, se
     * Protocol: TCP
     * Port Range: 22
     * Source: Anywhere (0.0.0.0/0,::/0)
-
    * Choose an existing or new key pair and click `Launch Instances`
 
-#### 2. Connect
+#### 3. Connect
 Once the instance is running (Status Check: 2/2), create an SSH tunnel to your instance. Enter the following into the terminal:
 ```
     ssh -L 8888:localhost:8888 -i <YOUR_CERT>.pem ubuntu@<DNS of your EC2 Instance>
 ```  
 
-#### 3. Starting the Jupyter Notebook
-   * Once logged in, change to the directory for this workshop
-```
-    cd mcl311
-```
-
+#### 4. Starting the Jupyter Notebook
    * Start Jupyter Notebook. Enter the following into the terminal:
 ```
-    jupyter notebook
+    jupyter notebook&
 ```
 
    * Copy the URL output from the jupyter notebook startup command and paste it in your browser. The URL looks like `http://localhost:8888/SsomeCookieString`
 
-#### 4. Run, Train & Model
+   * Upload the `fine-tuning-catsvsdogs.ipynb` notebook file from your git project to the local jupyter context folder.
+
+#### 5. Run, Train & Model
 Open notebook `fine-tuning-catsvsdogs.ipynb`
 
    * Run all cells in the notebook: select `Cell` menu and then click on `Run All`.
 
    * Go back to the Jupyter directory page, select the checkmark besides the file named `coreml.mlmodel` and then click `Download` to download the file on to your machine.
 
-#### 5. Creating the iOS App
+#### 6. Creating the iOS App
 We will be using a sample iOS app to test our newly created CoreML model.
-   * Download the app by:
-```
-TODO: git clone <github link>
-```
-   * Open the xcodeproj file in XCode.
+
+   * In your local git folder, open the xcodeproj file in XCode.
    * Import the `coreml.mlmodel` file by dragging it into your XCode project folder.
-   * TODO: Change the current model to `coreml().model`
+   * Change the current model to `coreml().model`
    * Clean and build project
    * Test your iOS app
 
