@@ -1,13 +1,15 @@
-#MXNet to CoreML Workshop
+# Workshop: Accelerating Apache MXNet Models on Apple Platforms Using Core ML
 
 ## Introduction
+
+This repository contains the Python code, deep learning models and the associated jupyter notebook to be used by the participants of the deep learning workshop at re:Invent 2017 (MCL311).
 
 With the release of [Core
 ML](https://developer.apple.com/machine-learning/) by Apple at [WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/703/), iOS,m acOS, watchOS and tvOS developers can now easily integrate a machine learning model into their app. This enables developers to bring intelligent new features to users with just a few lines of code. Core ML makes machine learning more accessible to mobile developers. It also enables rapid prototyping and the use of different sensors (like the camera, GPS, etc.) to create more powerful apps than ever.
 
-Members of the MXNet community, including contributors from Apple and Amazon Web Services (AWS), have collaborated to produce a tool that converts machine learning models built using MXNet to Core ML format. This tool makes it easy for developers to build apps powered by machine learning for Apple devices. With this conversion tool, you now have a fast pipeline for your deep-learning-enabled applications. You can move from scalable and efficient distributed model training in the AWS Cloud using MXNet to fast run time inference on Apple devices.
+Members of the MXNet community, including contributors from Apple and Amazon Web Services (AWS), have collaborated to produce a tool that converts machine learning models built using MXNet to the Core ML format. This tool makes it easy for developers to build apps powered by machine learning for Apple devices. With this conversion tool, you now have a fast pipeline for your deep-learning-enabled applications. You can move from scalable and efficient distributed model training in the AWS Cloud using MXNet to fast run-time inference on Apple devices.
 
-To support the release of the converter tool we will use models trained on millions of examples for one dataset, and apply them to improve performance on a new problem with a much smaller dataset to infer whether a image is a hot dog or not a hot dog. Then we will convert this model from MXNet into CoreML and import it into a sample iOS app written in Swift. The iOS app feeds a picture to the model, which predicts whether the image we are looking at is a hot dog or not a hot dog. For performance, we recommend that you run the app on a physical iOS device (e.g., an iPhone) installed with iOS 11, but you can also try it on the Simulator that comes with the Xcode 9.0.
+In this workshop, we will use models trained on millions of examples for one dataset, and apply them to improve performance on a new problem with a much smaller dataset to infer whether an image is that of a cat or a dog. We will then convert this model from MXNet into CoreML and import it into a sample iOS app written in Swift. The iOS app feeds a picture to the model, which predicts whether the image we are looking at is a cat or a dog. For performance, we recommend that you run the app on a physical iOS device (e.g., an iPhone) installed with iOS 11, but you can also try it on the simulator that comes with the Xcode 9.0 using the test images provided with the sample iOS app.
 
 ## Instructions
 
@@ -32,11 +34,11 @@ In the Amazon EC2 console, launch an instance. For step-by-step instructions, se
    * On the Add Storage page, use the default 50GB for storage size.
    * On the Add Tags page, add one tag with the key Name and any value (e.g. `mcl311`).
    * On the Configure Security Group page, leave the default settings which should be:
-    * Protocol (TCP) rule.
-    * Type : Custom TCP Rule
-    * Protocol: TCP
-    * Port Range: 22
-    * Source: Anywhere (0.0.0.0/0,::/0)
+   * Protocol (TCP) rule.
+     * Type : Custom TCP Rule
+     * Protocol: TCP
+     * Port Range: 22
+     * Source: Anywhere (0.0.0.0/0,::/0)
    * Choose an existing or new key pair and click `Launch Instances`
 
 #### 3. Connect
