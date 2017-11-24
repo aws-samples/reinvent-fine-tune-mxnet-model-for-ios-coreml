@@ -118,12 +118,12 @@ class ViewController: UIViewController, FrameExtractorDelegate {
                         self.settingImage = false
                     })
                 } else if Double(mlresults![1].doubleValue) > 0.9 && Double(mlresults![0].doubleValue) < 0.7{
-                    self.iSee.text = "I see a dog with confidence \(Double(mlresults![1].doubleValue)))"
+                    self.iSee.text = "I see a dog with confidence \(Double(mlresults![1].doubleValue))"
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(self.lag), execute: {
                         self.settingImage = false
                     })
                 } else {
-                    self.iSee.text = "Not a dog nor a cat with confidence \(String(describing: mlresults)))"
+                    self.iSee.text = "Not a dog nor a cat with confidence \(String(describing: mlresults))"
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(self.lag), execute: {
                         self.settingImage = false
                     })
