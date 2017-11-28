@@ -50,7 +50,7 @@ Once the instance is running (Status Check: 2/2), create an SSH tunnel to your i
 #### 4. Starting the Jupyter Notebook
    * Start Jupyter Notebook. Enter the following into the terminal:
 ```
-    jupyter notebook&
+    jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000000 &
 ```
 
    * Copy the URL output from the jupyter notebook startup command and paste it in your browser. The URL looks like `http://localhost:8888/SsomeCookieString`
