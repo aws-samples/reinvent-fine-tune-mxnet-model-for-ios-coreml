@@ -15,7 +15,6 @@
 		16B1576B1FBB730C00A28CB8 /* CatsAndDogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1576A1FBB730C00A28CB8 /* CatsAndDogsTests.swift */; };
 		16B157761FBB730C00A28CB8 /* CatsAndDogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B157751FBB730C00A28CB8 /* CatsAndDogsUITests.swift */; };
 		16B157841FBB753300A28CB8 /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B157831FBB753300A28CB8 /* FrameExtractor.swift */; };
-		21CF51851FC8AE78003E91AF /* coreml.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 21CF51841FC8AE78003E91AF /* coreml.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		16B157751FBB730C00A28CB8 /* CatsAndDogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndDogsUITests.swift; sourceTree = "<group>"; };
 		16B157771FBB730C00A28CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16B157831FBB753300A28CB8 /* FrameExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameExtractor.swift; path = ../../SeeFood/SeeFood/FrameExtractor.swift; sourceTree = "<group>"; };
-		21CF51841FC8AE78003E91AF /* coreml.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = coreml.mlmodel; path = ../../../../Downloads/coreml.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 			children = (
 				16B157551FBB730C00A28CB8 /* AppDelegate.swift */,
 				16B157571FBB730C00A28CB8 /* ViewController.swift */,
-				21CF51841FC8AE78003E91AF /* coreml.mlmodel */,
 				16B157591FBB730C00A28CB8 /* Main.storyboard */,
 				16B1575C1FBB730C00A28CB8 /* Assets.xcassets */,
 				16B1575E1FBB730C00A28CB8 /* LaunchScreen.storyboard */,
@@ -265,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CF51851FC8AE78003E91AF /* coreml.mlmodel in Sources */,
 				16B157841FBB753300A28CB8 /* FrameExtractor.swift in Sources */,
 				16B157581FBB730C00A28CB8 /* ViewController.swift in Sources */,
 				16B157561FBB730C00A28CB8 /* AppDelegate.swift in Sources */,
