@@ -60,7 +60,7 @@ Once the instance is running (Status Check: 2/2), create an SSH tunnel to your i
 #### 5. Run, Train & Model
 Open notebook `fine-tuning-catsvsdogs.ipynb`
 
-   * Run all cells in the notebook: select `Cell` menu and then click on `Run All`.
+   * Run all cells in the notebook: select `Cell` menu and then click on `Run Cells`.
 
    * Go back to the Jupyter directory page, select the checkmark besides the file named `coreml.mlmodel` and then click `Download` to download the file on to your machine.
 
