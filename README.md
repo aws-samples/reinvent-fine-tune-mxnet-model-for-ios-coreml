@@ -69,7 +69,6 @@ We will be using a sample iOS app to test our newly created CoreML model.
 
    * In your local git folder, open the xcodeproj file in XCode.
    * Import the `coreml.mlmodel` file by dragging it into your XCode project folder.
-   * Change the current model to `coreml().model`
    * Clean and build project
    * Test your iOS app
 
