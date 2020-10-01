@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the Python code, deep learning models and the associated jupyter notebook to be used by the participants of the deep learning workshop at re:Invent 2017 (MCL311).
+This repository contains the Python code, deep learning models and the associated jupyter notebook to be used by the participants of the deep learning good workshop at re:Invent 2017 (MCL311).
 
 With the release of [Core
 ML](https://developer.apple.com/machine-learning/) by Apple at [WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/703/), iOS,m acOS, watchOS and tvOS developers can now easily integrate a machine learning model into their app. This enables developers to bring intelligent new features to users with just a few lines of code. Core ML makes machine learning more accessible to mobile developers. It also enables rapid prototyping and the use of different sensors (like the camera, GPS, etc.) to create more powerful apps than ever.
@@ -14,7 +14,7 @@ In this workshop, we will use models trained on millions of examples for one dat
 ## Instructions
 
 #### 1. Download instructions and artifacts:
-* Download the git project by:
+* Download the git project by link:
 ```
 git clone https://github.com/aws-samples/reinvent-fine-tune-mxnet-model-for-ios-coreml.git
 ```
@@ -36,7 +36,7 @@ In the Amazon EC2 console, launch an instance. For step-by-step instructions, se
    * On the Configure Security Group page, leave the default settings which should be:
    * Protocol (TCP) rule.
      * Type : Custom TCP Rule
-     * Protocol: TCP
+     * Protocol: TCP2
      * Port Range: 22
      * Source: Anywhere (0.0.0.0/0,::/0)
    * Choose an existing or new key pair and click `Launch Instances`
@@ -75,7 +75,7 @@ We will be using a sample iOS app to test our newly created CoreML model.
 ____
 
 ### IMAGE ATTRIBUTION
-The following works of great photography were used in the iOS app:
+The following works of great photography were used in the iOS app please check:
 * https://pixabay.com/en/puppy-dog-pet-animal-cute-white-1903313/
 * https://pixabay.com/en/puppy-spaniel-dog-animal-young-2940583/
 * https://pixabay.com/en/dog-forest-lake-view-dog-human-2939126/
